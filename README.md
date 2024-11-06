@@ -1,3 +1,5 @@
+[![myWorkflow](https://github.com/justkraiz/hexlet-ci-app/actions/workflows/kraizWorkflow.yml/badge.svg)](https://github.com/justkraiz/hexlet-ci-app/actions/workflows/kraizWorkflow.yml)
+
 # Example app for CI Hexlet course
 
 Starting boilerplate of [Strapi](https://strapi.io/) application
