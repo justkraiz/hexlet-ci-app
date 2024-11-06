@@ -11,9 +11,7 @@ jobs:
     steps:
       # Клонируем репозиторий
       - uses: actions/checkout@v4
-      # Устанавливаем Node.js
-      - uses: actions/setup-node@v4
-      # Ставим зависимости
+      # Запускаем установку
       - run: make setup
       # Запускаем тесты
       - run: make test
