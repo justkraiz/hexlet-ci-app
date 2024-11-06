@@ -1,0 +1,21 @@
+# file: .github/workflows/kraizWorkflow.yml
+name: myWorkflow
+# on – определяет события, которые запускают воркфлоу
+on: push
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    steps:
+      # Клонируем репозиторий
+      - uses: actions/checkout@v4
+      # Устанавливаем Node.js
+      - uses: actions/setup-node@v4
+      # Ставим зависимости
+      - run: make setup
+      # Запускаем тесты
+      - run: make test
+      # Запускаем линтер
+      - run: make lint
